@@ -7,7 +7,9 @@
     --light-bg: #f8f9fa;
     --text-color: #333333;
     --border-color: #cccccc;
-    --font-family: Arial, Helvetica, sans-serif;
+
+    /* Set Roboto as the primary font family */
+    --font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -16,6 +18,7 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: #ffffff;
+}
 }
 
 /* Header & Header Span Centering */
