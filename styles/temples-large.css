@@ -1,0 +1,45 @@
+/* Media Query for Large Screens (min-width: 768px) */
+@media screen and (min-width: 768px) {
+
+    /* Hide hamburger button on large screens */
+    #menu {
+        display: none;
+    }
+
+    /* Force navigation to show horizontally via Flexbox */
+    nav {
+        position: static;
+        display: block;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .navigation {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    /* Expand main content container width */
+    main {
+        max-width: 1100px;
+    }
+
+    /* Convert grid layout to multiple columns for larger screens */
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+        /* Responsive Image Rule (place in your base temples.css) */
+        .grid-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+}
