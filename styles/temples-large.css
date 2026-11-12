@@ -15,6 +15,16 @@
         box-shadow: none;
     }
 
+        /* Ensure the navigation list uses Flexbox */
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            /* or row depending on your mobile/desktop setup */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
     .navigation {
         flex-direction: row;
         gap: 1rem;
@@ -42,4 +52,5 @@
             object-fit: cover;
             display: block;
         }
+
 }
