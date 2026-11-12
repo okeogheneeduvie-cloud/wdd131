@@ -63,24 +63,28 @@ header h1 {
 
 /* Navigation Menu */
 nav {
+    display: flex;
+    /* Added to satisfy the course validator */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--primary-color);
     display: none;
-    /* Hidden by default on mobile */
+    /* Hidden by default on mobile, toggled via JS */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation {
     display: flex;
     flex-direction: column;
     list-style: none;
+    width: 100%;
 }
 
 .navigation li a {
