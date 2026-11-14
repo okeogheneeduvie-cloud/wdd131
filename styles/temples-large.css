@@ -9,24 +9,19 @@
     /* Force navigation to show horizontally via Flexbox */
     nav {
         position: static;
-        display: block;
+        display: flex;
         width: auto;
         background: transparent;
         box-shadow: none;
     }
 
-        /* Ensure the navigation list uses Flexbox */
-        .navigation {
-            display: flex;
-            flex-direction: column;
-            /* or row depending on your mobile/desktop setup */
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
+    /* Horizontal navigation list layout */
     .navigation {
+        display: flex;
         flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
         gap: 1rem;
     }
 
@@ -40,17 +35,16 @@
         max-width: 1100px;
     }
 
-    /* Convert grid layout to multiple columns for larger screens */
+    /* Convert grid layout to 3 columns for larger screens */
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 
-        /* Responsive Image Rule (place in your base temples.css) */
-        .grid-container img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            display: block;
-        }
-
+    /* Uniform Image Sizing: fixes uneven card lengths in desktop view */
+    .grid-container figure img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
 }

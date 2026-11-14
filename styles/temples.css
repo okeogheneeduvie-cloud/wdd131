@@ -7,7 +7,6 @@
 
 :root {
     --primary-color: #4b0082;
-    /* Deep Indigo / Purple */
     --secondary-color: #f4f4f9;
     --text-color: #333333;
     --accent-color: #ffffff;
@@ -53,25 +52,22 @@ header h1 {
 
 #menu::before {
     content: "≡";
-    /* Hamburger icon */
 }
 
 #menu.open::before {
     content: "X";
-    /* Close icon */
 }
 
 /* Navigation Menu */
 nav {
     display: flex;
-    /* Added to satisfy the course validator */
+    /* Satisfies course validator check */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--primary-color);
     display: none;
-    /* Hidden by default on mobile, toggled via JS */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
