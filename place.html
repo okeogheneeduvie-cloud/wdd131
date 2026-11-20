@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria: Place Profile - WDD 131</title>
+    <meta name="description"
+        content="Explore Nigeria's geography, demographics, data, and weather conditions with wind chill calculations.">
+    <meta name="author" content="Oke Eduvie">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- External Script with defer -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main class="hero-container">
+        <!-- Hero Section with Responsive WebP Images via srcset -->
+        <picture class="hero">
+            <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+            <img src="images/hero-small.webp" alt="Scenic landscape view of Nigeria" width="800" height="500">
+        </picture>
+
+        <div class="content-grid">
+            <!-- Data Section -->
+            <section class="card data-card">
+                <h2>Data</h2>
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>923,768 sq km</dd>
+                    <dt>Population:</dt>
+                    <dd>223,800,000</dd>
+                    <dt>Capital:</dt>
+                    <dd>Abuja</dd>
+                    <dt>Languages:</dt>
+                    <dd>English, Hausa, Yoruba, Igbo</dd>
+                    <dt>Currency:</dt>
+                    <dd>Nigerian Naira (₦)</dd>
+                    <dt>Time Zone:</dt>
+                    <dd>WAT (UTC+1)</dd>
+                </dl>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="card weather-card">
+                <h2 id="weather-heading">Weather</h2>
+                <div id="weather-icon-container">
+                    <!-- SVG icon rendered on mobile only; hidden on wider screens via CSS -->
+                    <svg class="mobile-weather-icon" aria-hidden="true" focusable="false"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+                        <path
+                            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z" />
+                    </svg>
+                </div>
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd><span id="temp">30</span> °C</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+                    <dt>Wind Speed:</dt>
+                    <dd><span id="wind">12</span> km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd id="windchill">N/A</dd>
+                </dl>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Oke Eduvie | Delta State, Nigeria</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
