@@ -1,132 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="SafeChill NG helps food handlers, vendors, and households maintain safe cold chain temperatures and avoid the food safety danger zone.">
-    <meta name="author" content="Oke Eduvie">
-    <title>SafeChill NG | Cold Chain Integrity &amp; Food Safety</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
-            rel="stylesheet">
-    </noscript>
+    body {
+        font-family: 'Open Sans', 'Open Sans Fallback', sans-serif;
+        background-color: #F4F7F9;
+        color: #1E293B;
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
+        line-height: 1.25;
+    }
+
+    .container {
+        width: min(1120px, 100% - 2rem);
+        margin-inline: auto;
+    }
+
+    .site-header {
+        background-color: #0B3C5D;
+        color: #FFFFFF;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 68px;
+        gap: 1rem;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 0.5rem 0.9rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+    }
+
+    .nav-list a.active,
+    .nav-list a:hover {
+        background-color: #1D6F8A;
+    }
+
+    .hero {
+        padding: 2.5rem 0;
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #145369;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+        color: #0B3C5D;
+        margin-bottom: 0.9rem;
+    }
+
+    .hero-copy p {
+        color: #475569;
+        margin-bottom: 1.4rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        display: inline-block;
+        font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        padding: 0.7rem 1.15rem;
+        border-radius: 6px;
+        border: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #1D6F8A;
+        color: #FFFFFF;
+    }
+
+    .btn-outline {
+        background-color: transparent;
+        color: #0B3C5D;
+        border-color: #0B3C5D;
+    }
+
+    .checker-card {
+        background-color: #FFFFFF;
+        border: 1px solid #CBD5E1;
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    @media (max-width: 860px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
+<noscript>
     <link rel="stylesheet" href="styles/main.css">
-</head>
-
-<body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="brand" aria-label="SafeChill NG Home">
-                <svg class="brand-logo" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-                    <rect width="36" height="36" rx="8" fill="#1D6F8A" />
-                    <path d="M18 7V29M11 11L18 15L25 11M10 18H26M11 25L18 21L25 25" stroke="#FFFFFF" stroke-width="2.4"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span class="brand-name">SafeChill NG</span>
-            </a>
-
-            <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
-                aria-label="Toggle navigation menu">
-                &#9776;
-            </button>
-
-            <nav id="primary-nav" class="primary-nav" aria-label="Main Navigation">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="guide.html">Storage Guide</a></li>
-                    <li><a href="audit.html">Cold Audit</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <p class="eyebrow">Cold Chain Integrity Field Guide</p>
-                    <h1>Keep Perishables Safe From Market to Table</h1>
-                    <p>Practical temperature standards, storage windows, and rapid response steps for warm
-                        climates—built for caterers, cold-room operators, vendors, and households.</p>
-                    <div class="hero-actions">
-                        <a href="guide.html" class="btn btn-primary">Explore Storage Guide</a>
-                        <a href="audit.html" class="btn btn-outline">Run Storage Audit</a>
-                    </div>
-                </div>
-
-                <aside class="checker-card" aria-labelledby="checker-heading">
-                    <h2 id="checker-heading">Live Temperature Checker</h2>
-                    <p class="checker-subtext">Enter a food or storage reading in degrees Celsius (&deg;C) to inspect
-                        its safety zone.</p>
-
-                    <form id="temp-checker-form" class="checker-form" novalidate>
-                        <label for="temp-input">Measured Temperature (&deg;C)</label>
-                        <div class="checker-input-row">
-                            <input type="number" id="temp-input" name="tempInput" step="0.5" placeholder="e.g., 4 or 22"
-                                required>
-                            <button type="submit" class="btn btn-primary">Check Temp</button>
-                        </div>
-                    </form>
-
-                    <div id="temp-result" class="temp-result neutral" role="status" aria-live="polite">
-                        <p>Enter a temperature above (such as <strong>-18</strong>, <strong>3</strong>,
-                            <strong>25</strong>, or <strong>75</strong>) to evaluate food safety status.
-                        </p>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-        <section class="pillars-section">
-            <div class="container">
-                <div class="section-heading">
-                    <h2>Three Core Temperature Zones</h2>
-                    <p>Bacterial growth accelerates rapidly when perishable foods linger outside verified cold or hot
-                        limits.</p>
-                </div>
-
-                <div class="pillars-grid">
-                    <article class="pillar-card safe-border">
-                        <span class="badge safe-badge">Safe Cold &amp; Freezer</span>
-                        <h3>At or Below 4&deg;C (Freezer &le; -18&deg;C)</h3>
-                        <p>Refrigeration at or below 4&deg;C slows microbial multiplication in dairy, cooked dishes, and
-                            fresh cuts; -18&deg;C or colder halts bacterial growth for long-term storage.</p>
-                    </article>
-
-                    <article class="pillar-card danger-border">
-                        <span class="badge danger-badge">Danger Zone</span>
-                        <h3>5&deg;C to 60&deg;C</h3>
-                        <p>Pathogens can multiply rapidly in this window—especially in warm ambient climates. Limit
-                            exposure time and cool hot foods quickly into shallow containers.</p>
-                    </article>
-
-                    <article class="pillar-card info-border">
-                        <span class="badge info-badge">Safe Hot Holding</span>
-                        <h3>Above 60&deg;C</h3>
-                        <p>Keep hot soups, stews, and cooked proteins steaming above 60&deg;C during service or
-                            transport until chilled properly for storage.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; 2026 SafeChill NG &bull; Cold Chain &amp; Food Safety Reference</p>
-            <p><a href="references.html">References &amp; Standards</a></p>
-        </div>
-    </footer>
-
-    <script src="scripts/main.js" defer></script>
-</body>
-
-</html>
+</noscript>
