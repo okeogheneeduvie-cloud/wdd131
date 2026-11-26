@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Site plan for SafeChill NG, a cold chain integrity and perishable food safety field guide.">
+    <meta name="author" content="Oke Eduvie">
+    <title>Site Plan | SafeChill NG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+    </noscript>
+    <style>
+        @font-face {
+            font-family: 'Montserrat Fallback';
+            src: local('Arial'), local('Helvetica Neue'), local('sans-serif');
+            size-adjust: 113%;
+            ascent-override: 86%;
+            descent-override: 22%;
+            line-gap-override: 0%;
+        }
+
+        @font-face {
+            font-family: 'Open Sans Fallback';
+            src: local('Arial'), local('Helvetica Neue'), local('sans-serif');
+            size-adjust: 105%;
+            ascent-override: 102%;
+            descent-override: 28%;
+            line-gap-override: 0%;
+        }
+
+        :root {
+            --primary: #0B3C5D;
+            --secondary: #1D6F8A;
+            --danger: #B91C1C;
+            --safe: #2E7D32;
+            --bg-light: #F4F7F9;
+            --surface: #FFFFFF;
+            --text-dark: #1E293B;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Open Sans Fallback', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 1.5rem;
+        }
+
+        header,
+        main,
+        footer {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--surface);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            margin-bottom: 0.4rem;
+        }
+
+        section {
+            background-color: var(--surface);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.25rem;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .swatch {
+            padding: 1rem;
+            border-radius: 6px;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .swatch-light {
+            color: var(--text-dark);
+            border: 1px solid #CBD5E1;
+        }
+
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .wireframe-box {
+            border: 2px dashed var(--secondary);
+            background-color: var(--bg-light);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .wf-block {
+            background-color: var(--surface);
+            border: 1px solid #94A3B8;
+            padding: 0.6rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .wf-cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #475569;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 700px) {
+            .wireframe-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Website Site Plan: SafeChill NG</h1>
+        <p>WDD 131 Final Project Proposal &amp; Architectural Blueprint</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Site Name &amp; Reason for Selection</h2>
+            <p><strong>Site Name:</strong> SafeChill NG — <em>Cold Chain Integrity &amp; Perishable Food Safety Field
+                    Guide</em></p>
+            <p><strong>Why Selected:</strong> Maintaining unbroken cold storage in warm climates is critical to
+                preventing foodborne illness and reducing post-harvest food waste. This subject translates food science
+                and cold chain temperature standards into a practical, everyday digital reference for food vendors,
+                caterers, and households.</p>
+        </section>
+
+        <section>
+            <h2>2. Site Purpose &amp; Content Outline</h2>
+            <p><strong>Purpose:</strong> To provide clear, science-backed temperature guidelines, shelf-life limits, and
+                power-outage emergency procedures for perishable foods across three cohesive pages:</p>
+            <ul>
+                <li><strong>Page 1 — Home (<code>index.html</code>):</strong> Introduces cold chain fundamentals,
+                    explains the Temperature Danger Zone (5°C–60°C), and includes an interactive JavaScript Temperature
+                    Status Checker.</li>
+                <li><strong>Page 2 — Storage Directory (<code>guide.html</code>):</strong> A searchable and
+                    category-filterable directory of perishable items (Meat &amp; Poultry, Dairy, Seafood, Fresh
+                    Produce) rendered dynamically from JavaScript objects, allowing users to bookmark items into a
+                    persistent "My Saved Storage List" via <code>localStorage</code>.</li>
+                <li><strong>Page 3 — Cold Storage Self-Audit (<code>audit.html</code>):</strong> Features power-outage
+                    survival rules (the 2-hour/4-hour rule) and an accessible HTML form where vendors or homeowners can
+                    log fridge/freezer readings and receive instant safety feedback.</li>
+                <li><strong>References Page (<code>references.html</code>):</strong> Linked in the footer to properly
+                    cite all external images and food safety standards (WHO, FAO, NAFDAC).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Target Audience &amp; User Scenarios</h2>
+            <p><strong>Target Audience:</strong> Small-scale cold room operators, caterers, restaurant kitchen managers,
+                market vendors, and home cooks in Nigeria seeking reliable temperature and food preservation standards.
+            </p>
+            <ul>
+                <li><strong>Scenario 1:</strong> A caterer checks the exact safe refrigeration temperature and maximum
+                    storage days for raw poultry versus cooked stews before an event.</li>
+                <li><strong>Scenario 2:</strong> A household experiences a 3-hour power outage and uses the self-audit
+                    guide to determine which items in their refrigerator remain safe to consume.</li>
+                <li><strong>Scenario 3:</strong> A food vendor filters the storage directory for dairy and meat products
+                    and saves their daily checklist to <code>localStorage</code> for quick mobile reference.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Color Scheme &amp; Typography</h2>
+            <p><strong>Typography:</strong> <code>Montserrat</code> (Headings) paired with <code>Open Sans</code> (Body
+                copy and temperature tables).</p>
+            <div class="swatches">
+                <div class="swatch" style="background-color: #0B3C5D;">Primary: #0B3C5D<br>(Headers &amp; Nav)</div>
+                <div class="swatch" style="background-color: #1D6F8A;">Secondary: #1D6F8A<br>(Buttons &amp; Accents)
+                </div>
+                <div class="swatch" style="background-color: #2E7D32;">Safe Zone: #2E7D32<br>(Verified Cold Status)
+                </div>
+                <div class="swatch" style="background-color: #B91C1C;">Danger Zone: #B91C1C<br>(Alert Badges)</div>
+                <div class="swatch swatch-light" style="background-color: #F4F7F9;">Background: #F4F7F9<br>(Page Canvas)
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Custom Wireframes (Desktop &amp; Mobile)</h2>
+            <div class="wireframe-grid">
+                <div class="wireframe-box">
+                    <h3>Desktop View (1024px+)</h3>
+                    <div class="wf-block">Header: Custom SVG Logo + Horizontal Nav</div>
+                    <div class="wf-block" style="display:grid; grid-template-columns: 1.2fr 1fr; gap:0.5rem;">
+                        <div style="border:1px solid #cbd5e1; padding:0.5rem;">Hero Mission &amp; CTA</div>
+                        <div style="border:1px solid #cbd5e1; padding:0.5rem;">Live Temp Checker Widget</div>
+                    </div>
+                    <div class="wf-cols">
+                        <div class="wf-block">Cold Zone Card</div>
+                        <div class="wf-block">Danger Zone Card</div>
+                        <div class="wf-block">Outage Rule Card</div>
+                    </div>
+                    <div class="wf-block">Footer + References Link</div>
+                </div>
+
+                <div class="wireframe-box">
+                    <h3>Mobile View (375px)</h3>
+                    <div class="wf-block">Header: Logo + Hamburger Button</div>
+                    <div class="wf-block">Stacked Hero Intro &amp; CTA</div>
+                    <div class="wf-block">Live Temp Checker Widget</div>
+                    <div class="wf-block">Card 1: Cold Zone</div>
+                    <div class="wf-block">Card 2: Danger Zone</div>
+                    <div class="wf-block">Card 3: Outage Rule</div>
+                    <div class="wf-block">Footer + References Link</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SafeChill NG | Site Plan by Oke Eduvie | WDD 131</p>
+    </footer>
+</body>
+
+</html>

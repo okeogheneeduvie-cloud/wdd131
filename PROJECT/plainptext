@@ -1,0 +1,12 @@
+project/
+├── siteplan.html        <-- Your Site Plan document
+├── index.html           <-- Page 1: Home & Cold Chain Fundamentals
+├── guide.html           <-- Page 2: Interactive Perishable Storage Directory
+├── audit.html           <-- Page 3: Cold Storage Self-Audit Form & Power Contingency
+├── references.html      <-- Page 4: Unstyled/Clean Attribution & Sources Page
+├── styles/
+│   ├── siteplan.css
+│   └── main.css
+├── scripts/
+│   └── main.js
+└── images/              <-- Optimized WebP images
