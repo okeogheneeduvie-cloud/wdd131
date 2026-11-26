@@ -114,9 +114,12 @@ function createTempleCard(temple, index) {
     img.alt = `${temple.templeName} Temple`;
     img.width = width;
     img.height = height;
-    img.loading = index === 0 ? "eager" : "lazy";
+    img.decoding = "async";
     if (index === 0) {
-        img.decoding = "sync";
+        img.loading = "eager";
+        img.fetchPriority = "high";
+    } else {
+        img.loading = "lazy";
     }
 
     card.append(title, location, dedicated, area, img);

@@ -12,7 +12,9 @@
     --secondary-color: #f4f4f9;
     --text-color: #333333;
     --accent-color: #ffffff;
-    --font-family: 'Roboto', sans-serif;
+    --border-color: #dddddd;
+    --hover-bg: #6b2d9e;
+    --font-family: 'Roboto', Arial, sans-serif;
 }
 
 body {
@@ -45,8 +47,8 @@ header h1 {
 /* Hamburger Button */
 #menu {
     font-size: 1.8rem;
-    background: none;
-    border: none;
+    background-color: var(--primary-color);
+    border: 0;
     color: var(--accent-color);
     cursor: pointer;
     padding: 0.2rem 0.5rem;
@@ -68,7 +70,7 @@ nav {
     width: 100%;
     background-color: var(--primary-color);
     display: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #111111;
     z-index: 50;
 }
 
@@ -90,13 +92,13 @@ nav.open {
     color: var(--accent-color);
     text-decoration: none;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .navigation li a:hover,
 .navigation li a:focus,
 .navigation li a.active {
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: var(--hover-bg);
     font-weight: 700;
 }
 
@@ -123,10 +125,10 @@ main h2 {
 
 .temple-card {
     background-color: var(--accent-color);
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px #cccccc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -148,7 +150,6 @@ main h2 {
 .temple-card img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 10;
     object-fit: cover;
     border-radius: 4px;
     margin-top: 0.5rem;
