@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album - WDD 131</title>
+    <meta name="description"
+        content="A responsive filtered temple picture album page showcasing temples with dynamic filtering by age and square footage.">
+    <meta name="author" content="Oke Eduvie">
+
+    <!-- Google Fonts Preconnect & Non-Blocking Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Fallback Font Metric Override to Reduce Layout Shift -->
+    <style>
+        @font-face {
+            font-family: 'Roboto Fallback';
+            src: local('Arial'), local('Helvetica Neue'), local('sans-serif');
+            size-adjust: 100%;
+            ascent-override: 93%;
+            descent-override: 25%;
+            line-gap-override: 0%;
+        }
+
+        body {
+            font-family: 'Roboto', 'Roboto Fallback', sans-serif;
+        }
+    </style>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <!-- External Script with defer -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+            <button type="button" id="menu" aria-label="Toggle Navigation Menu" aria-expanded="false"></button>
+            <nav aria-label="Primary Navigation">
+                <ul class="navigation">
+                    <li><a href="#" id="filter-home" class="active" aria-current="page">Home</a></li>
+                    <li><a href="#" id="filter-old">Old</a></li>
+                    <li><a href="#" id="filter-new">New</a></li>
+                    <li><a href="#" id="filter-large">Large</a></li>
+                    <li><a href="#" id="filter-small">Small</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="page-title">Home</h2>
+        <div class="grid-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Oke Eduvie | Nigeria</p>
+        <p id="lastModified">Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
