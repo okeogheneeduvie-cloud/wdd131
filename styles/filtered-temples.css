@@ -14,6 +14,8 @@
     --accent-color: #ffffff;
     --border-color: #dddddd;
     --hover-bg: #6b2d9e;
+    --shadow-dark: #111111;
+    --shadow-light: #cccccc;
     --font-family: 'Roboto', Arial, sans-serif;
 }
 
@@ -70,7 +72,7 @@ nav {
     width: 100%;
     background-color: var(--primary-color);
     display: none;
-    box-shadow: 0 4px 6px #111111;
+    box-shadow: 0 4px 6px var(--shadow-dark);
     z-index: 50;
 }
 
@@ -128,7 +130,7 @@ main h2 {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 1rem;
-    box-shadow: 0 2px 4px #cccccc;
+    box-shadow: 0 2px 4px var(--shadow-light);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
